@@ -1,0 +1,30 @@
+meta {
+  name: Create Orders
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:8080/orders/v1/create
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "description": "Mac Pro",
+      "quantity": 2,
+      "person": {
+        "id": 3
+      }
+    },
+    {
+      "description": "Ipad Air",
+      "quantity": 3,
+      "person": {
+        "id": 4
+      }
+    }
+  ]
+}

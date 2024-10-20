@@ -1,0 +1,36 @@
+meta {
+  name: Create a Person
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/persons/v1/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "José Leonel",
+    "lastName": "inga Quintana",
+    "dni": "72050629",
+    "address": {
+      "avenue": "Av. Álamo",
+      "number": 13,
+      "district": "Comas",
+      "province": "Lima",
+      "department": "Lima"
+    },
+    "orders": [
+      {
+        "description": "Macbook Air",
+        "quantity": 1
+      },
+      {
+        "description": "Macbook pro",
+        "quantity": 2
+      }
+    ]
+  }
+}

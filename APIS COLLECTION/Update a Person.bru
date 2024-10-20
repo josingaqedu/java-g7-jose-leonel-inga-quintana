@@ -1,0 +1,44 @@
+meta {
+  name: Update a Person
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:8080/persons/v1/update/8
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "José Leonel Update 2.0",
+    "lastName": "Inga Quintana Update 2.0",
+    "dni": "72050629",
+    "address": {
+      "id": 8,
+      "avenue": "Av. Álamo Update 2.0",
+      "number": 13,
+      "district": "Comas Update 2.0",
+      "province": "Lima Update 2.0",
+      "department": "Lima Update 2.0"
+    },
+    "orders": [
+      {
+        "id": 1,
+        "description": "Macbook Air Update 2.0",
+        "quantity": 1
+      },
+      {
+        "id": 2,
+        "description": "Macbook Pro Update 2.0",
+        "quantity": 2
+      },
+      {
+        "id": 4,
+        "description": "iMac Update 2.0",
+        "quantity": 4
+      }
+    ]
+  }
+}
